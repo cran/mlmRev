@@ -28,8 +28,11 @@
 \end{abstract}
 <<preliminaries,echo=FALSE,print=FALSE>>=
 options(width=75)
-library(mlmRev)
+library(Matrix)
 library(lattice)
+library(latticeExtra)
+library(lme4)
+library(mlmRev)
 options(show.signif.stars = FALSE)
 @
 
@@ -83,12 +86,32 @@ misrecorded school.
 <<Chem97prep,results=hide,echo=FALSE>>=
 lmer(score ~ gcsecnt + (1|school) + (1|lea), Chem97)
 @ 
+
+These results are from the 1997 A-level Chemistry exam.  The
+\code{school} is nested in \code{lea} (local education authority) and
+has unique levels for each of the 2410 schools.  It is a good practice
+to make the nesting explicit by specifying the grouping factors as the
+`outer' factor, \code{lea} in this case, and the interaction of the
+outer and inner factors, \code{lea:school} or \code{school:lea} in
+this case.  This will ensure unique levels for each \code{school}
+within \code{lea} combination.
+
+To fit the model \code{mC2} we increase the number of EM iterations
+from its default of 20 to 40.  Without this change the current version
+of the \code{optim} function in \RR{} will declare convergence to an
+incorrect optimum.  By increasing the number of EM iterations we are
+able to get closer to the optimum before calling \code{optim} and
+converge to the correct value.  The optim function will be patched so
+this change will not be needed in future versions of \RR{}.
+
 Data from the 1997 A-level Chemistry exam are available as \code{Chem97}.
+
 <<Chem97>>=
 str(Chem97)
-#system.time(mC1 <- lmer(score ~ 1+(1|lea:school) + (1|lea), Chem97), gc = TRUE)
-#summary(mC1)
-system.time(mC2 <- lmer(score ~ gcsecnt + (1|school) + (1|lea), Chem97), gc = TRUE)
+system.time(mC1 <- lmer(score ~ 1+(1|lea:school) + (1|lea), Chem97), gc = TRUE)
+summary(mC1)
+system.time(mC2 <- lmer(score ~ gcsecnt + (1|school) + (1|lea), Chem97,
+                        control = list(niterEM = 40)), gc = TRUE)
 summary(mC2)
 @ 
 
