@@ -1,3 +1,12 @@
+2005-08-26  Douglas Bates  <bates@wisc.edu>
+
+	* man/Mmmec.Rd: Added example and then conditionalized the
+	example using AGQ.
+
+2005-07-12  Douglas Bates  <bates@wisc.edu>
+
+	* inst/doc/MlmSoftRev.Rnw: Expanded discussion considerably.
+
 2005-05-19  Douglas Bates  <bates@bates1-home>
 
 	* tests/lmerTest.R: Removed defunct tests and updated results of
