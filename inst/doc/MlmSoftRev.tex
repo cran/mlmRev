@@ -210,7 +210,7 @@ fraction of a second.
 +     Exam))
 \end{Sinput}
 \begin{Soutput}
-[1] 0.09 0.00 0.08 0.00 0.00
+[1] 0.2 0.0 0.2 0.0 0.0
 \end{Soutput}
 \end{Schunk}
 
@@ -1035,7 +1035,7 @@ Data from the 1997 A-level Chemistry exam are available as \code{Chem97}.
 +     Chem97), gc = TRUE)
 \end{Sinput}
 \begin{Soutput}
-[1] 2.90 0.11 3.00 0.00 0.00
+[1] 2.74 0.12 2.86 0.00 0.00
 \end{Soutput}
 \begin{Sinput}
 > summary(mC1)
@@ -1062,7 +1062,7 @@ Fixed effects:
 +     lea), Chem97, control = list(niterEM = 40)), gc = TRUE)
 \end{Sinput}
 \begin{Soutput}
-[1] 0.90 0.03 0.93 0.00 0.00
+[1] 0.87 0.07 0.94 0.00 0.00
 \end{Soutput}
 \begin{Sinput}
 > summary(mC2)
@@ -1151,7 +1151,7 @@ reproduce this fit as
 +     Contraception, binomial))
 \end{Sinput}
 \begin{Soutput}
-[1] 0.13 0.00 0.13 0.00 0.00
+[1] 0.14 0.00 0.14 0.00 0.00
 \end{Soutput}
 \begin{Sinput}
 > Cm1
@@ -1180,47 +1180,14 @@ livch2       1.3545533  0.1729641   7.8314 4.824e-15
 livch3+      1.3241531  0.1773558   7.4661 8.262e-14
 \end{Soutput}
 \begin{Sinput}
-> system.time(Cm2 <- lmer(use ~ age + urban + livch + (1 | district), 
-+     Contraception, binomial, method = "Laplace"))
-\end{Sinput}
-\begin{Soutput}
-[1] 3.46 0.01 3.48 0.00 0.00
-\end{Soutput}
-\begin{Sinput}
-> Cm2
-\end{Sinput}
-\begin{Soutput}
-Generalized linear mixed model fit using Laplace 
-Formula: use ~ age + urban + livch + (1 | district) 
-   Data: Contraception 
- Family: binomial(logit link)
-      AIC     BIC    logLik deviance
- 2429.601 2474.14 -1206.801 2413.601
-Random effects:
-     Groups        Name    Variance    Std.Dev. 
-   district (Intercept)     0.21261     0.46109 
-# of obs: 1934, groups: district, 60
-
-Estimated scale (compare to 1)  1.021623 
-
-Fixed effects:
-              Estimate Std. Error  z value  Pr(>|z|)
-(Intercept) -1.6877013  0.1452147 -11.6221 < 2.2e-16
-age         -0.0265756  0.0078152  -3.4005 0.0006727
-urbanY       0.7340753  0.1183317   6.2035 5.521e-10
-livch1       1.1087731  0.1565011   7.0848 1.393e-12
-livch2       1.3755044  0.1729641   7.9525 1.827e-15
-livch3+      1.3440250  0.1773558   7.5781 3.506e-14
-\end{Soutput}
-\begin{Sinput}
-> system.time(Cm3 <- lmer(use ~ age + urban + livch + (1 | district), 
-+     Contraception, binomial, method = "AGQ"))
-\end{Sinput}
-\begin{Soutput}
-[1] 4.81 0.01 4.81 0.00 0.00
-\end{Soutput}
-\begin{Sinput}
-> Cm3
+> if (exists("nlminb", mode = "function")) {
++     system.time(Cm2 <- lmer(use ~ age + urban + livch + (1 | 
++         district), Contraception, binomial, method = "Laplace"))
++     Cm2
++     system.time(Cm3 <- lmer(use ~ age + urban + livch + (1 | 
++         district), Contraception, binomial, method = "AGQ"))
++     Cm3
++ }
 \end{Sinput}
 \begin{Soutput}
 Generalized linear mixed model fit using AGQ 
@@ -1280,14 +1247,11 @@ livch2       1.3342511  0.1745854   7.6424 2.132e-14
 livch3+      1.3227367  0.1795440   7.3672 1.743e-13
 \end{Soutput}
 \begin{Sinput}
-> system.time(Cm5 <- lmer(use ~ age + urban + livch + (urban | 
-+     district), Contraception, binomial, method = "Laplace"))
-\end{Sinput}
-\begin{Soutput}
-[1] 7.21 0.01 7.22 0.00 0.00
-\end{Soutput}
-\begin{Sinput}
-> Cm5
+> if (exists("nlminb", mode = "function")) {
++     system.time(Cm5 <- lmer(use ~ age + urban + livch + (urban | 
++         district), Contraception, binomial, method = "Laplace"))
++     Cm5
++ }
 \end{Sinput}
 \begin{Soutput}
 Generalized linear mixed model fit using Laplace 
@@ -1357,35 +1321,11 @@ live children and those who don't.
 We include a quadratic term in \code{age}
 \begin{Schunk}
 \begin{Sinput}
-> (Cm6 <- lmer(use ~ age + I(age^2) + urban + livch + (1 | district), 
-+     Contraception, binomial, method = "AGQ"))
-\end{Sinput}
-\begin{Soutput}
-Generalized linear mixed model fit using AGQ 
-Formula: use ~ age + I(age^2) + urban + livch + (1 | district) 
-   Data: Contraception 
- Family: binomial(logit link)
-      AIC      BIC    logLik deviance
- 2390.486 2440.592 -1186.243 2372.486
-Random effects:
-     Groups        Name    Variance    Std.Dev. 
-   district (Intercept)     0.22965     0.47922 
-# of obs: 1934, groups: district, 60
-
-Estimated scale (compare to 1)  1.027380 
-
-Fixed effects:
-               Estimate  Std. Error z value  Pr(>|z|)
-(Intercept) -1.01594748  0.17423926 -5.8308 5.518e-09
-age          0.00350981  0.00921331  0.3809    0.7032
-I(age^2)    -0.00458880  0.00072305 -6.3465 2.203e-10
-urbanY       0.68389839  0.11977356  5.7099 1.130e-08
-livch1       0.80217960  0.16191417  4.9544 7.257e-07
-livch2       0.90132794  0.18483015  4.8765 1.080e-06
-livch3+      0.90006573  0.18546304  4.8531 1.216e-06
-\end{Soutput}
-\begin{Sinput}
-> anova(Cm1, Cm6)
+> if (exists("nlminb", mode = "function")) {
++     (Cm6 <- lmer(use ~ age + I(age^2) + urban + livch + (1 | 
++         district), Contraception, binomial, method = "AGQ"))
++     anova(Cm1, Cm6)
++ }
 \end{Sinput}
 \begin{Soutput}
 Data: Contraception
@@ -1405,33 +1345,11 @@ fitting a model with the indicator \code{livch == 0} as one of the
 terms in the fixed effects.
 \begin{Schunk}
 \begin{Sinput}
-> (Cm7 <- lmer(use ~ age + I(age^2) + urban + (livch == 0) + (1 | 
-+     district), Contraception, binomial, method = "AGQ"))
-\end{Sinput}
-\begin{Soutput}
-Generalized linear mixed model fit using AGQ 
-Formula: use ~ age + I(age^2) + urban + (livch == 0) + (1 | district) 
-   Data: Contraception 
- Family: binomial(logit link)
-      AIC      BIC    logLik deviance
- 2386.943 2425.914 -1186.471 2372.943
-Random effects:
-     Groups        Name    Variance    Std.Dev. 
-   district (Intercept)     0.22830     0.47781 
-# of obs: 1934, groups: district, 60
-
-Estimated scale (compare to 1)  1.027534 
-
-Fixed effects:
-                  Estimate  Std. Error z value  Pr(>|z|)
-(Intercept)    -0.14136696  0.10169380 -1.3901    0.1645
-age             0.00617737  0.00782799  0.7891    0.4300
-I(age^2)       -0.00466050  0.00071423 -6.5252 6.792e-11
-urbanY          0.67973583  0.11956250  5.6852 1.307e-08
-livch == 0TRUE -0.84656062  0.14706981 -5.7562 8.604e-09
-\end{Soutput}
-\begin{Sinput}
-> anova(Cm6, Cm7)
+> if (exists("nlminb", mode = "function")) {
++     (Cm7 <- lmer(use ~ age + I(age^2) + urban + (livch == 0) + 
++         (1 | district), Contraception, binomial, method = "AGQ"))
++     anova(Cm6, Cm7)
++ }
 \end{Sinput}
 \begin{Soutput}
 Data: Contraception
@@ -1456,8 +1374,10 @@ any children versus no children to the data set
 so we can check for an interaction with the \code{urban} factor.
 \begin{Schunk}
 \begin{Sinput}
-> (Cm8 <- lmer(use ~ age + I(age^2) + urban * children + (1 | district), 
-+     Contraception, binomial, method = "AGQ"))
+> if (exists("nlminb", mode = "function")) {
++     (Cm8 <- lmer(use ~ age + I(age^2) + urban * children + (1 | 
++         district), Contraception, binomial, method = "AGQ"))
++ }
 \end{Sinput}
 \begin{Soutput}
 Generalized linear mixed model fit using AGQ 
@@ -1490,73 +1410,14 @@ effect of urban versus rural or in the effect of any children versus
 no children by fitting further models
 \begin{Schunk}
 \begin{Sinput}
-> (Cm9 <- lmer(use ~ age + I(age^2) + urban + children + (urban | 
-+     district), Contraception, binomial, method = "Laplace"))
-\end{Sinput}
-\begin{Soutput}
-Generalized linear mixed model fit using Laplace 
-Formula: use ~ age + I(age^2) + urban + children + (urban | district) 
-   Data: Contraception 
- Family: binomial(logit link)
-      AIC      BIC    logLik deviance
- 2378.938 2429.044 -1180.469 2360.938
-Random effects:
- Groups   Name        Variance Std.Dev. Corr   
- district (Intercept) 0.38334  0.61914         
-          urbanY      0.54648  0.73924  -0.794 
-# of obs: 1934, groups: district, 60
-
-Estimated scale (compare to 1)  1.015014 
-
-Fixed effects:
-              Estimate Std. Error z value  Pr(>|z|)
-(Intercept) -1.0338419  0.1783648 -5.7962 6.783e-09
-age          0.0057762  0.0079049  0.7307     0.465
-I(age^2)    -0.0045492  0.0007210 -6.3096 2.797e-10
-urbanY       0.7676803  0.1626603  4.7195 2.364e-06
-childrenY    0.8712301  0.1484547  5.8687 4.393e-09
-\end{Soutput}
-\begin{Sinput}
-> anova(Cm7, Cm9)
-\end{Sinput}
-\begin{Soutput}
-Data: Contraception
-Models:
-Cm7: use ~ age + I(age^2) + urban + (livch == 0) + (1 | district)
-Cm9: use ~ age + I(age^2) + urban + children + (urban | district)
-    Df     AIC     BIC  logLik  Chisq Chi Df Pr(>Chisq)
-Cm7  7  2386.9  2425.9 -1186.5                         
-Cm9  9  2378.9  2429.0 -1180.5 12.005      2   0.002472
-\end{Soutput}
-\begin{Sinput}
-> (Cm10 <- lmer(use ~ age + I(age^2) + urban + children + (children | 
-+     district), Contraception, binomial, method = "Laplace"))
-\end{Sinput}
-\begin{Soutput}
-Generalized linear mixed model fit using Laplace 
-Formula: use ~ age + I(age^2) + urban + children + (children | district) 
-   Data: Contraception 
- Family: binomial(logit link)
-      AIC      BIC    logLik deviance
- 2387.888 2437.994 -1184.944 2369.888
-Random effects:
- Groups   Name        Variance Std.Dev. Corr   
- district (Intercept) 0.46455  0.68158         
-          childrenY   0.29709  0.54506  -0.727 
-# of obs: 1934, groups: district, 60
-
-Estimated scale (compare to 1)  1.013278 
-
-Fixed effects:
-               Estimate  Std. Error z value  Pr(>|z|)
-(Intercept) -1.06057305  0.18544077 -5.7192 1.070e-08
-age          0.00696144  0.00789076  0.8822    0.3777
-I(age^2)    -0.00464493  0.00071791 -6.4700 9.798e-11
-urbanY       0.69950039  0.12042808  5.8084 6.305e-09
-childrenY    0.91440356  0.17237364  5.3048 1.128e-07
-\end{Soutput}
-\begin{Sinput}
-> anova(Cm7, Cm10)
+> if (exists("nlminb", mode = "function")) {
++     (Cm9 <- lmer(use ~ age + I(age^2) + urban + children + (urban | 
++         district), Contraception, binomial, method = "Laplace"))
++     anova(Cm7, Cm9)
++     (Cm10 <- lmer(use ~ age + I(age^2) + urban + children + (children | 
++         district), Contraception, binomial, method = "Laplace"))
++     anova(Cm7, Cm10)
++ }
 \end{Sinput}
 \begin{Soutput}
 Data: Contraception
@@ -1586,33 +1447,11 @@ so we produce a sample from the posterior distribution of the
 parameters in model \code{Cm11}
 \begin{Schunk}
 \begin{Sinput}
-> (Cm11 <- lmer(use ~ age + I(age^2) + urban + children + (1 | 
-+     district), Contraception, binomial, method = "AGQ"))
-\end{Sinput}
-\begin{Soutput}
-Generalized linear mixed model fit using AGQ 
-Formula: use ~ age + I(age^2) + urban + children + (1 | district) 
-   Data: Contraception 
- Family: binomial(logit link)
-      AIC      BIC    logLik deviance
- 2386.918 2425.889 -1186.459 2372.918
-Random effects:
-     Groups        Name    Variance    Std.Dev. 
-   district (Intercept)     0.22822     0.47773 
-# of obs: 1934, groups: district, 60
-
-Estimated scale (compare to 1)  1.027538 
-
-Fixed effects:
-               Estimate  Std. Error z value  Pr(>|z|)
-(Intercept) -1.00289039  0.16778919 -5.9771 2.272e-09
-age          0.00643755  0.00782799  0.8224    0.4109
-I(age^2)    -0.00466413  0.00071423 -6.5303 6.565e-11
-urbanY       0.69212653  0.11956250  5.7888 7.088e-09
-childrenY    0.85816677  0.14706981  5.8351 5.376e-09
-\end{Soutput}
-\begin{Sinput}
-> Cs11 <- mcmcsamp(Cm11, 10000, trans = FALSE)
+> if (exists("nlminb", mode = "function")) {
++     (Cm11 <- lmer(use ~ age + I(age^2) + urban + children + (1 | 
++         district), Contraception, binomial, method = "AGQ"))
++     Cs11 <- mcmcsamp(Cm11, 10000, trans = FALSE)
++ }
 \end{Sinput}
 \end{Schunk}
 Density plots (Figure~\ref{fig:Contra2})
@@ -1670,7 +1509,7 @@ variance of the random effects shows noticeable skewness.
 +     I(age^4) + (age + I(age^2) | Subject), Oxboys), gc = TRUE)
 \end{Sinput}
 \begin{Soutput}
-[1] 0.07 0.00 0.06 0.00 0.00
+[1] 0.06 0.00 0.06 0.00 0.00
 \end{Soutput}
 \begin{Sinput}
 > summary(mX1)
@@ -1709,7 +1548,7 @@ I(age^4)  0.021  0.016 -0.857 -0.021
 +     Subject), Oxboys), gc = TRUE)
 \end{Sinput}
 \begin{Soutput}
-[1] 0.11 0.00 0.10 0.00 0.00
+[1] 0.1 0.0 0.1 0.0 0.0
 \end{Soutput}
 \begin{Sinput}
 > summary(mX2)
@@ -1766,7 +1605,7 @@ poly(ag,4)4 0.000  0.000  0.000  0.000
 +     ScotsSec), gc = TRUE)
 \end{Sinput}
 \begin{Soutput}
-[1] 0.11 0.00 0.12 0.00 0.00
+[1] 0.12 0.00 0.12 0.00 0.00
 \end{Soutput}
 \begin{Sinput}
 > summary(mS1)
