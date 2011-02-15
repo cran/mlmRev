@@ -1,11 +1,11 @@
-%PDF-1.1
+%PDF-1.4
 %Å‚Å„ÅœÅ”\r
 1 0 obj
 <<
-/CreationDate (D:20080625122233)
-/ModDate (D:20080625122233)
+/CreationDate (D:20110216231345)
+/ModDate (D:20110216231345)
 /Title (R Graphics Output)
-/Producer (R 2.7.0)
+/Producer (R 2.12.2)
 /Creator (R)
 >>
 endobj
@@ -17,72 +17,140 @@ endobj
 endobj
 5 0 obj
 <<
-/Type /Font
-/Subtype /Type1
-/Name /F1
-/BaseFont /ZapfDingbats
+/Type /Page
+/Parent 3 0 R
+/Contents 6 0 R
+/Resources 4 0 R
 >>
 endobj
 6 0 obj
 <<
-/Type /Page
-/Parent 3 0 R
-/Contents 7 0 R
-/Resources 4 0 R
->>
-endobj
-7 0 obj
-<<
-/Length 8 0 R
+/Length 7 0 R
 >>
 stream
-q
+1 J 1 j q
 Q q
 BT
 0.000 0.000 0.000 rg
 /F3 1 Tf 14.00 0.00 -0.00 14.00 269.72 541.45 Tm (ExamMxd) Tj
+ET
+BT
 /F2 1 Tf 12.00 0.00 -0.00 12.00 285.06 47.52 Tm (school) Tj
-/F2 1 Tf 0.00 12.00 -12.00 0.00 41.76 286.04 Tm (sex) Tj
+ET
+BT
+/F2 1 Tf 0.00 12.00 -12.00 0.00 41.76 286.04 Tm [(se) 30 (x)] TJ
 ET
 Q q 59.04 73.44 486.72 443.52 re W n
 BT
 0.000 0.000 0.000 rg
 /F2 1 Tf 8.00 0.00 -0.00 8.00 84.38 508.38 Tm (1) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 97.14 508.45 Tm (3) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 110.21 508.38 Tm (4) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 122.42 508.51 Tm (5) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 132.36 508.45 Tm (9) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 140.83 508.45 Tm (10) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 152.18 508.38 Tm (12) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 164.24 508.45 Tm (13) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 183.93 508.38 Tm (14) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 204.98 508.45 Tm (15) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 222.40 508.38 Tm (17) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 237.99 508.45 Tm (19) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 249.19 508.45 Tm (20) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 262.16 508.38 Tm (22) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 274.57 508.45 Tm (23) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 286.23 508.45 Tm (26) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 299.35 508.45 Tm (28) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 310.80 508.45 Tm (32) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 323.26 508.45 Tm (33) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 334.91 508.45 Tm (34) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 345.41 508.45 Tm (38) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 357.52 508.38 Tm (42) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 369.98 508.45 Tm (43) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 382.19 508.45 Tm (45) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 395.51 508.45 Tm (46) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 410.30 508.38 Tm (47) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 424.58 508.45 Tm (50) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 437.65 508.45 Tm (51) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 447.43 508.45 Tm (54) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 456.86 508.51 Tm (55) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 467.81 508.45 Tm (56) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 478.55 508.45 Tm (59) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 490.61 508.45 Tm (61) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 503.88 508.45 Tm (62) Tj
+ET
+BT
 /F2 1 Tf 8.00 0.00 -0.00 8.00 515.44 508.45 Tm (63) Tj
+ET
+BT
 /F2 1 Tf 0.00 8.00 -8.00 0.00 68.73 364.02 Tm (M) Tj
+ET
+BT
 /F2 1 Tf 0.00 8.00 -8.00 0.00 68.73 152.05 Tm (F) Tj
 ET
 0.745 0.745 0.745 rg
@@ -445,14 +513,14 @@ b
 Q
 endstream
 endobj
-8 0 obj
-7468
+7 0 obj
+7712
 endobj
 3 0 obj
 <<
 /Type /Pages
 /Kids [
-6 0 R
+5 0 R
 ]
 /Count 1
 /MediaBox [0 0 576 576]
@@ -461,11 +529,11 @@ endobj
 4 0 obj
 <<
 /ProcSet [/PDF /Text]
-/Font << /F1 5 0 R /F2 10 0 R /F3 11 0 R >>
+/Font <</F2 9 0 R /F3 10 0 R >>
 /ExtGState << >>
 >>
 endobj
-9 0 obj
+8 0 obj
 <<
 /Type /Encoding
 /BaseEncoding /WinAnsiEncoding
@@ -474,40 +542,39 @@ endobj
 /dieresis /.notdef /ring /cedilla /.notdef /hungarumlaut /ogonek /caron /space]
 >>
 endobj
-10 0 obj <<
+9 0 obj <<
 /Type /Font
 /Subtype /Type1
 /Name /F2
 /BaseFont /Helvetica
-/Encoding 9 0 R
+/Encoding 8 0 R
 >> endobj
-11 0 obj <<
+10 0 obj <<
 /Type /Font
 /Subtype /Type1
 /Name /F3
 /BaseFont /Helvetica-Bold
-/Encoding 9 0 R
+/Encoding 8 0 R
 >> endobj
 xref
-0 12
+0 11
 0000000000 65535 f 
 0000000021 00000 n 
-0000000163 00000 n 
-0000007916 00000 n 
-0000007999 00000 n 
-0000000212 00000 n 
-0000000295 00000 n 
-0000000375 00000 n 
-0000007896 00000 n 
-0000008103 00000 n 
-0000008360 00000 n 
-0000008457 00000 n 
+0000000164 00000 n 
+0000008078 00000 n 
+0000008161 00000 n 
+0000000213 00000 n 
+0000000293 00000 n 
+0000008058 00000 n 
+0000008253 00000 n 
+0000008510 00000 n 
+0000008606 00000 n 
 trailer
 <<
-/Size 12
+/Size 11
 /Info 1 0 R
 /Root 2 0 R
 >>
 startxref
-8559
+8708
 %%EOF

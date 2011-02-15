@@ -1,14 +1,18 @@
 Package: mlmRev
-Version: 0.99875-1
-Date: 2008-06-25
+Version: 1.0-0
+Date: 2011-02-15
 Title: Examples from Multilevel Modelling Software Review
-Author: Douglas Bates <bates@stat.wisc.edu>
-Maintainer: Douglas Bates <bates@stat.wisc.edu>
-Description: Data and examples from a multilevel modelling software review
-  as well as other well-known data sets from the multilevel modelling
-  literature.
-Depends: lme4(>= 0.999375-19), Matrix(>= 0.999375-9), R(>= 2.6.0)
-Suggests: MASS, lattice
+Author: Douglas Bates <bates@stat.wisc.edu>, Martin Maechler
+        <maechler@R-project.org> and Ben Bolker <bbolker@gmail.com>
+Maintainer: <lme4-authors@R-forge.wu-wien.ac.at>
+Description: Data and examples from a multilevel modelling software
+        review as well as other well-known data sets from the
+        multilevel modelling literature.
+Depends: lme4, R (>= 2.10)
 LazyData: yes
 License: GPL (>= 2)
-Packaged: Wed Jun 25 12:29:46 2008; bates
+Repository: CRAN
+Repository/R-Forge/Project: lme4
+Repository/R-Forge/Revision: 1259
+Date/Publication: 2011-02-17 13:08:07
+Packaged: 2011-02-16 22:14:58 UTC; rforge
