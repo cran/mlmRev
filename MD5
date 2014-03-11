@@ -1,6 +1,7 @@
 520511891275075282fc5f500c6f07fb *ChangeLog
-8dee74156ed0f8675f0bcd75afb4948e *DESCRIPTION
+3a0bdc43b158eba79c027d0e859e308d *DESCRIPTION
 78e3a88f875665cfbd477496fbecae0b *NAMESPACE
+fe68621355af4092b6acd1aa11601a49 *build/vignette.rds
 2d2625e8f4ff3c4fe3751e4781fc0267 *data/Chem97.rda
 15d2e8360d12b01ca310d6fee4d3634b *data/Contraception.rda
 f4b727b4de16c70be4b2e9e96758db2b *data/Early.rda
@@ -18,8 +19,8 @@ e0f53953b8d79cf5c377db77d30cc460 *data/guPrenat.rda
 318e6db921abcbcaa19892f5bf2d5825 *data/s3bbx.rda
 863df9544b372951a4a27ef22272c93b *data/s3bby.rda
 27ed5a6f1fbe24b47732046315a8cb56 *data/star.rda
-0c9ea04bc16a2f31db5b604f49be5d14 *inst/doc/MlmSoftRev.R
-c0db35d716413205c7f1aaccb4298160 *inst/doc/MlmSoftRev.Rnw
+ee11c5bd87a2ad79b1b2134f18360ae7 *inst/doc/MlmSoftRev.R
+bad05c22fdf345b002b5a4d6365f0f02 *inst/doc/MlmSoftRev.Rnw
 c31ca16434ab1c078c33f035948a9306 *inst/doc/MlmSoftRev.pdf
 3bd43ec5ad8b7c799d50aa631a23ed8b *inst/doc/StarData.R
 56ac13cb9a2977e8858bf3e4d301d029 *inst/doc/StarData.Rnw
@@ -45,7 +46,7 @@ af9e29a767582088d14cd278354ce0cc *man/guPrenat.Rd
 9594dfe90c990556f9ea36cd983d891e *tests/guImmun.R
 7d4dc651d7c884b0385ffa4843e4c8d7 *tests/lmerTest.R
 01b5965f5c3e67bf27a8e3b024a3cf1c *tests/versions.R
-c0db35d716413205c7f1aaccb4298160 *vignettes/MlmSoftRev.Rnw
+bad05c22fdf345b002b5a4d6365f0f02 *vignettes/MlmSoftRev.Rnw
 8c5730e0cecdf2a96f647770924c1ee4 *vignettes/MlmSoftRev.bib
 56ac13cb9a2977e8858bf3e4d301d029 *vignettes/StarData.Rnw
 f41eb3d9fd035d80f016a01baeec764a *vignettes/myVignette.sty

@@ -7,6 +7,7 @@ options(width=80, show.signif.stars = FALSE,
         lattice.theme = function() canonical.theme("pdf", color = FALSE))
 library(mlmRev)
 library(lme4)
+library(lattice)
 set.seed(1234321)
 
 
