@@ -28,7 +28,7 @@
   These data are an example of cross-classified grouping factors.
 }
 \source{
-  \url{http://multilevel.ioe.ac.uk/softrev/2lev-xc.html}
+  \url{http://www.bristol.ac.uk/cmm/learning/mmsoftware/data-rev.html}
 }
 \references{
   Paterson, L. (1991). Socio economic status and educational attainment:

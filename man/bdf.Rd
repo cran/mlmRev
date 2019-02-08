@@ -40,9 +40,6 @@
     \item{groupsiz}{a numeric vector}
   }
 }
-\source{
-  \url{http://stat.gamma.rug.nl/snijders/multilevel.htm}
-}
 \references{
   Snijders, Tom and Bosker, Roel (1999)
   \emph{Multilevel Analysis: An Introduction to Basic and Advanced

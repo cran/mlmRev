@@ -27,7 +27,7 @@
   response models, the distribution of the response is not well
   described by a Normal distribution.}
 \source{
-  \url{http://multilevel.ioe.ac.uk/softrev/chem97.html}
+  \url{http://www.bristol.ac.uk/cmm/learning/mmsoftware/data-rev.html}
 
 }
 \references{

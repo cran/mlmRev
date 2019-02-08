@@ -28,7 +28,7 @@
 }
 %\details{}
 \source{
-  \url{http://multilevel.ioe.ac.uk/softrev/exam.html}
+  \url{http://www.bristol.ac.uk/cmm/learning/mmsoftware/data-rev.html}
 }
 \references{
   Goldstein, H., Rasbash, J., et al (1993). A multilevel analysis of

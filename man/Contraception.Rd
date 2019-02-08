@@ -23,7 +23,7 @@
 }
 %\details{}
 \source{
-  \url{http://multilevel.ioe.ac.uk/softrev/bang.html}
+  \url{http://www.bristol.ac.uk/cmm/learning/mmsoftware/data-rev.html}
 }
 \references{
   Steele, F., Diamond, I. And Amin, S. (1996). Immunization uptake in

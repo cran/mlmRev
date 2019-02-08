@@ -31,12 +31,11 @@
   }
 }
 \details{
-  These data are provided at \url{http://multilevel.ioe.ac.uk/softrev/}
-  as an example of multilevel data with a multinomial response.  Results
-  from several multilevel software packages are provided at this site.
+  These data are provided as an example of multilevel data with a 
+  multinomial response.
 }
 \source{
-  \url{http://multilevel.ioe.ac.uk/softrev/socatt.htm}
+  \url{http://www.bristol.ac.uk/cmm/learning/mmsoftware/data-rev.html}
 }
 \references{
   McGrath, K. and Waterton, J. (1986). \emph{British Social Attitudes
