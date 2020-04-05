@@ -1,5 +1,5 @@
-cd3c291707544d157c67438079379587 *ChangeLog
-db7aaea86aaa97f96382124b9ad61c2c *DESCRIPTION
+20573bb2835417c331a112fdcc4bd6d2 *ChangeLog
+0f84be95b23a3b07d147025dec2053e2 *DESCRIPTION
 78e3a88f875665cfbd477496fbecae0b *NAMESPACE
 a001d50cd0e9ebf3202b933618c78af6 *build/vignette.rds
 2d2625e8f4ff3c4fe3751e4781fc0267 *data/Chem97.rda
@@ -21,10 +21,10 @@ e0f53953b8d79cf5c377db77d30cc460 *data/guPrenat.rda
 27ed5a6f1fbe24b47732046315a8cb56 *data/star.rda
 3960ebc0e56afac46d2cfab7ad6286ca *inst/doc/MlmSoftRev.R
 bad05c22fdf345b002b5a4d6365f0f02 *inst/doc/MlmSoftRev.Rnw
-206200b8115d4573047faa6645808c43 *inst/doc/MlmSoftRev.pdf
+94a956ca309551020011ff3dcf859234 *inst/doc/MlmSoftRev.pdf
 d8413495f288ca11ed7264ac2f2442c1 *inst/doc/StarData.R
 56ac13cb9a2977e8858bf3e4d301d029 *inst/doc/StarData.Rnw
-87a8c72f90890bb84d52dc820ea24449 *inst/doc/StarData.pdf
+7a836c5c56f9519fc05876ab114dfe76 *inst/doc/StarData.pdf
 0e23fe9cf9c849e398af107ef5c72773 *inst/original/text-star.zip
 47d3b5a266121e055844f3a35448521a *man/Chem97.Rd
 6054f73c3abbeba2f799f82b89c18748 *man/Contraception.Rd
@@ -43,7 +43,7 @@ af9e29a767582088d14cd278354ce0cc *man/guPrenat.Rd
 7b3aeee1de9d4b34365b92cbad9c3b8b *man/s3bbx.Rd
 3198a6369b2821310aa9671071fa6be6 *man/s3bby.Rd
 4d7d68134e2def1fb2004b0033f2edd9 *man/star.Rd
-32d57eebc41cf7bd45b9290015c9eeaf *tests/guImmun.R
+7945efb9109aea25b007c5d4cc58d52c *tests/guImmun.R
 5887a2686a7fce076981f69c6fb48623 *tests/lmerTest.R
 01b5965f5c3e67bf27a8e3b024a3cf1c *tests/versions.R
 bad05c22fdf345b002b5a4d6365f0f02 *vignettes/MlmSoftRev.Rnw

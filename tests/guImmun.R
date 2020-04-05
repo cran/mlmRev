@@ -23,7 +23,14 @@ anova(fm, fm.h, fm.ho)
 AN[, "logLik"] + 1362                   # an inversion in the first two models
 ## FIXME: AN doesn't have a deviance column!
 ## AN[, "deviance"] - 2711                 # deviance scale shows this more clearly
-stopifnot(AN[,"Df"] == c(9,10,12,15,18),
+
+if (packageVersion("lme4") <= "1.1.21") {
+  stopifnot(AN[,"Df"] == c(9,10,12,15,18), TRUE)
+} else {
+  stopifnot(AN[,"npar"] == c(9,10,12,15,18), TRUE)
+}
+
+
 #          all.equal(AN[,"logLik"] + 1362,
 #                    c(0.6072186497422, 0.6289103306312, 0.8541186984307,
 #                      2.725550814599, 6.299084917162), tol = 1e-6),
@@ -32,8 +39,6 @@ stopifnot(AN[,"Df"] == c(9,10,12,15,18),
 #                      "momEdS"= 0.3487824136, "momWorkY"=0.2672759992340,
 #                      "ruralY"=-0.678846606719, "pcInd81"=-0.9612710104134),
 #                    tol = 1e-4),
-          TRUE
-          )
 
 
 cat('Time elapsed: ', proc.time(),'\n') # "stats"
